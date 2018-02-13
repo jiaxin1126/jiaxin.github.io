@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Nonsense"><title>L3DCubeについてのまとめ（Photon） | Let it be.</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-113875376-1','auto');ga('send','pageview');</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">L3DCubeについてのまとめ（Photon）</h1><a id="logo" href="/.">Let it be.</a><p class="description">Thinking writing recording.</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">L3DCubeについてのまとめ（Photon）</h1><div class="post-meta">Feb 12, 2018</div><a class="disqus-comment-count" data-disqus-identifier="2018/02/12/L3DCubeについてのまとめ（Photon）/" href="/2018/02/12/L3DCubeについてのまとめ（Photon）/#disqus_thread"></a><div class="post-content"><p>このpostはやっぱ日本語と中国語で書いておく。<br>日本語版と中国語版と別にする。</p>
+<a id="more"></a>
+<h2 id="L3DCube-8x8x8-の基本"><a href="#L3DCube-8x8x8-の基本" class="headerlink" title="L3DCube(8x8x8)の基本"></a>L3DCube(8x8x8)の基本</h2><p><a href="http://cubetube.org/docs_jp/" target="_blank" rel="external">L3DCube</a><br>一言でいえば、<strong>8x8x8個のLED</strong>＋<strong>Photonというデバイス</strong>。<br>8x8x8LEDは頭がないやつで、ピカピカするか黙るか全部Photonからの命令。<br>つまり、実際にCubeの本体は<a href="https://docs.particle.io/guide/getting-started/intro/photon/" target="_blank" rel="external">Photon</a>という、下についてるいつも点滅してる、サイズ的にちょっとミニなデバイス。</p>
+<h2 id="Photon"><a href="#Photon" class="headerlink" title="Photon"></a>Photon</h2><p><a href="https://www.particle.io/" target="_blank" rel="external">Particle</a>という会社の製品。</p>
+<p>こいつはすごく面倒くさくて情緒が不安定で、気分（モード）が変わったら表情（ピカピカしてる光の色）も変わる。<br>まぁこいつとうまく付き合うために一応覚えたほうがいいことを覚えましょう。<br><a href="https://docs.particle.io/guide/getting-started/modes/photon/" target="_blank" rel="external">デバイスモード</a></p>
+<p>ps.DFUモードが重要。どうやってDFUモードに入るのも重要。リセットの仕方より重要。</p>
+<p>pps.Photonはどうやって携帯とか経由でWi-Fiと接続するのかとかのことは上のサイトのDocumentで書いてあるのでここで省略。</p>
+<h2 id="Photonと会話する（×）方法"><a href="#Photonと会話する（×）方法" class="headerlink" title="Photonと会話する（×）方法"></a>Photonと会話する（×）方法</h2><p>（<a href="https://github.com/particle-iot" target="_blank" rel="external">メモ</a>→重要）</p>
+<ul>
+<li><a href="https://login.particle.io/login?app=web-ide&amp;redirect=https://build.particle.io/build" target="_blank" rel="external">Web IDE</a></li>
+<li><a href="https://docs.particle.io/guide/tools-and-features/dev/" target="_blank" rel="external">Desktop IDE</a></li>
+<li><a href="https://docs.particle.io/guide/tools-and-features/firmware-manager/photon/" target="_blank" rel="external">Firmware Manager</a></li>
+<li><a href="https://docs.particle.io/guide/tools-and-features/cli/photon/" target="_blank" rel="external">Particle-cli</a></li>
+<li><a href="https://github.com/particle-iot/firmware#1-download-and-install-dependencies" target="_blank" rel="external">Firmware</a></li>
+</ul>
+<h3 id="Web-IDE"><a href="#Web-IDE" class="headerlink" title="Web IDE"></a>Web IDE</h3><p>Cubeではなく、単なるPhotonをいじる時に使った。</p>
+<h3 id="Desktop-IDE"><a href="#Desktop-IDE" class="headerlink" title="Desktop IDE"></a>Desktop IDE</h3><p>実はAtom.<br>使い方はWeb IDEと一緒で、ローカルで既存exampleファイルとかがある時にこっちのほうが便利。<br>ただし、このpostを書く時点で実行を成功したことが一回もない。</p>
+<h3 id="Firmware-Manager"><a href="#Firmware-Manager" class="headerlink" title="Firmware Manager"></a>Firmware Manager</h3><p>一番便利に見えそうだけど見た目が言いづらいので一瞬開いで一瞬閉じた。<br>なので何も言えない。</p>
+<h3 id="Particle-cli"><a href="#Particle-cli" class="headerlink" title="Particle-cli"></a>Particle-cli</h3><p>情報系だとこれは一番親切でしょう！！！！！<br>ただしインストールするのは超絶面倒くさい。<br>少なくとも私がインストースする際にはそうだった。</p>
+<!-- なぜ面倒くさいというと、最初にPLATFORMを明確してなかったということ。
+同じParticle会社の製品として、Photon以外ElectronとSpark coreもある。 -->
+<p>公式Documentsに従って<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> npm install -g particle-cli</span></div></pre></td></tr></table></figure></p>
+<p>をしたらエラーだった。<br><code>Error info* &#39;! Error loading module &#39;serialport&#39;: Could not locate the bindings file. &#39;</code></p>
+<p><a href="https://community.particle.io/t/particle-cli-issues-error-loading-module-serialport/32239/5" target="_blank" rel="external">解決法</a><br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g --unsafe-perm <span class="keyword">node</span><span class="title">-pre-gyp</span> npm serialport particle-cli</div></pre></td></tr></table></figure></p>
+<p>エラーとか出ずに順調にparticle-cliをインストールした後particle setupなどのコマンドも行けた。</p>
+<h4 id="本当にうまく行けたかどうかを確認しましょう。"><a href="#本当にうまく行けたかどうかを確認しましょう。" class="headerlink" title="本当にうまく行けたかどうかを確認しましょう。"></a>本当にうまく行けたかどうかを確認しましょう。</h4><p><a href="https://docs.particle.io/guide/tools-and-features/cli/photon/#blink-an-led-with-tinker" target="_blank" rel="external">Blink an LED with Tinker</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> particle flash XXXXcube tinker</span></div></pre></td></tr></table></figure></p>
+<p>出力：<br><code>attempting to flash firmware to your device XXXXcube</code><br><code>Flash device OK:  Update started</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> particle list</span></div></pre></td></tr></table></figure>
+<p>出力：<br> <code>...(略)</code><br> <code>Functions:</code><br> <code>int digitalread(String args)</code><br> <code>int digitalwrite(String args)</code><br> <code>int analogread(String args)</code><br> <code>int analogwrite(String args)</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> particle call XXXXcube digitalwrite D7,HIGH</span></div></pre></td></tr></table></figure>
+<p>出力：<br> <code>1</code></p>
+<p><img src="/Users/jiaxin91/Documents/github_page_blog/jiaxin/source/_posts/L3DCubeについてのまとめ（Photon）/high.jpg" alt="HIGH"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> particle call my_device_name digitalwrite D7,LOW</span></div></pre></td></tr></table></figure>
+<p>出力：<br><code>1</code></p>
+<p><img src="/Users/jiaxin91/Documents/github_page_blog/jiaxin/source/_posts/L3DCubeについてのまとめ（Photon）/low.jpg" alt="HIGH"></p>
+<p>（D7LEDはこいつだ。。。）</p>
+<p>他にはlibraryのsearchやinstallなどはDocumentsに従ってやれば問題ない。ここで省略。</p>
+<h3 id="Firmware"><a href="#Firmware" class="headerlink" title="Firmware"></a>Firmware</h3><p>最後はこれ。情報系だと前のやつより多分こっちがもっと親切なのかもしれない。<br>手順によってやれば問題ないはず。<br>はず。<br>私の場合ではproblemが出たから最後Particle-cliで解決したのでproblemの解決法が分からなかった。</p>
+<h2 id="終わり（途中だけど）"><a href="#終わり（途中だけど）" class="headerlink" title="終わり（途中だけど）"></a>終わり（途中だけど）</h2><p>一応Photonに関してのまとめはここまで。L3DCubeに関してのことに比べるとまだまだ簡単。<br>明日の任務：</p>
+<ul>
+<li>学校に行かない</li>
+<li>早起き</li>
+<li>L3DCube Libraryに関するまとめ（現時点では失敗経験しか書けないけれど）</li>
+<li>動的計画法に関する勉強メモ＋例題を解くこと</li>
+<li>チョコケーキのレシピを調べること！！！！！！！！！！！！<ul>
+<li>キルシュトルテ？</li>
+<li>蝦餃なども作ってみたいな</li>
+</ul>
+</li>
+<li>………..某先輩の論文を読むこと（マジで泣きたい</li>
+</ul>
+</div><div class="tags"><a href="/tags/L3DCube/">L3DCube</a><a href="/tags/photon/">photon</a><a href="/tags/particle/">particle</a><a href="/tags/日本語/">日本語</a></div><div class="post-nav"><a class="next" href="/2018/02/12/What-I-m-gonna-do-tomorrow/What-I-m-gonna-do-tomorrow/">What I'm gonna do tomorrow</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论 「请确保 disqus.com 可以正常加载」</button></div><script>var disqus_shortname = 'https-jiaxin1126-github-io';
+var disqus_identifier = '2018/02/12/L3DCubeについてのまとめ（Photon）/';
+var disqus_title = 'L3DCubeについてのまとめ（Photon）';
+var disqus_url = 'http://jiaxinwu.com/2018/02/12/L3DCubeについてのまとめ（Photon）/';
+$('.btn_click_load').click(function() {
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  $('.btn_click_load').css('display','none');
+});
+$.ajax({
+  url: 'https://disqus.com/next/config.json',
+  timeout: 3000,
+  type: 'GET',
+  success: (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    $('.btn_click_load').css('display','none');
+  })(),
+  error: function() {
+    $('.btn_click_load').css('display','block');
+  }
+});</script><script id="dsq-count-scr" src="//https-jiaxin1126-github-io.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://jiaxinwu.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/L3DCube/" style="font-size: 15px;">L3DCube</a> <a href="/tags/photon/" style="font-size: 15px;">photon</a> <a href="/tags/particle/" style="font-size: 15px;">particle</a> <a href="/tags/日本語/" style="font-size: 15px;">日本語</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/English/" style="font-size: 15px;">English</a> <a href="/tags/nonsense/" style="font-size: 15px;">nonsense</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/L3DCubeについてのまとめ（Photon）/">L3DCubeについてのまとめ（Photon）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/What-I-m-gonna-do-tomorrow/What-I-m-gonna-do-tomorrow/">What I'm gonna do tomorrow</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/12/Add-comments-using-Disquz/">Add comments using Disquz</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/19/Today-is-September-19th/">Today is September 19th.</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/18/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> Recent Comments</i></div><script type="text/javascript" src="//https-jiaxin1126-github-io.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">Let it be..</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
