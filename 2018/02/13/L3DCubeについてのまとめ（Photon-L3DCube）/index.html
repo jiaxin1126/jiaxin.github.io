@@ -36,13 +36,13 @@ ga('create','UA-113875376-1','auto');ga('send','pageview');</script></head><body
 <p>また、ディレクトリの中に入ってるのはinoファイルだね。いいね。</p>
 <h4 id="L3D-Library"><a href="#L3D-Library" class="headerlink" title="L3D-Library"></a><strong><a href="https://github.com/enjrolas/L3D-Library" target="_blank" rel="external">L3D-Library</a></strong></h4><p>→Processing library for the L3D cube</p>
 <p>うんいいね。開発者がProcessingでも書き込めるよーと言ったね。<br>ディレクトリの中は.pdeファイル。結構古い感。</p>
-<h4 id="Cubetube-Library"><a href="#Cubetube-Library" class="headerlink" title="Cubetube-Library"></a><strong><a href="https://github.com/enjrolas/Cubetube-Library" target="_blank" rel="external">Cubetube-Library</a></strong></h4><p>らイブラリーのbeta版らしい。<br>READMEがないけれどcompileファイルとprogramファイルを読んだほうがいい。</p>
+<h4 id="Cubetube-Library"><a href="#Cubetube-Library" class="headerlink" title="Cubetube-Library"></a><strong><a href="https://github.com/enjrolas/Cubetube-Library" target="_blank" rel="external">Cubetube-Library</a></strong></h4><p>ライブラリーのbeta版らしい。<br>READMEがないけれどcompileファイルとprogramファイルを読んだほうがいい。</p>
 <h4 id="L3D-Spark"><a href="#L3D-Spark" class="headerlink" title="L3D-Spark"></a><strong><a href="https://github.com/jiaxin1126/L3D-spark" target="_blank" rel="external">L3D-Spark</a></strong></h4><p>Sparkって何？<br>Sparkとのは、同じくParticleの製品で、Photonの兄弟のことだよ。</p>
 <p>ではSparkバージョンのライブラリーはphotonで使えるの？</p>
 <p>答えは、わからん。<br>わからんので使ってみた。失敗したけど</p>
 <p>READMEを超絶重要なので読んでおこう。<br>失敗したけどちょっと重要かなと思った共通ポイントとメモする。</p>
-<p>まず、DFUモードについて。<br>ローカルでParticle-cliを使わないで実行するとしたら、USB経由通信することになるのでDFUモードに入るのは必要。<br>DFUモードは前編で書いておいたのでここで省略。<br><a href="https://community.particle.io/t/solved-make-clean-all-platform-photon-s-program-dfu-error/16946/5" target="_blank" rel="external">DFUモードに入らなくて実行すると出るエラーについて</a></p>
-<p>つぎ、プラットフォームの明確について。<br>明確しないとmakeする際にエラー出る。platformを明確しましょう。<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ make <span class="keyword">program</span>-dfu <span class="keyword">PLATFORM</span>=photon</div></pre></td></tr></table></figure></p>
+<p><strong>まず、DFUモードについて。</strong><br>ローカルでParticle-cliを使わないで実行するとしたら、USB経由通信することになるのでDFUモードに入るのは必要。<br>DFUモードは前編で書いておいたのでここで省略。<br><a href="https://community.particle.io/t/solved-make-clean-all-platform-photon-s-program-dfu-error/16946/5" target="_blank" rel="external">DFUモードに入らなくて実行すると出るエラーについて</a></p>
+<p><strong>つぎ、プラットフォームの明確について。</strong><br>明確しないとmakeする際にエラー出る。platformを明確しましょう。<br><figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ make <span class="keyword">program</span>-dfu <span class="keyword">PLATFORM</span>=photon</div></pre></td></tr></table></figure></p>
 <p><a href="https://community.particle.io/t/program-dfu-error-74/12556" target="_blank" rel="external">明確しないと出るエラーについて</a></p>
 <h3 id="開発者以外"><a href="#開発者以外" class="headerlink" title="開発者以外"></a>開発者以外</h3><p>本当に情報収集だけなので何もコメントできない。</p>
 <ul>
