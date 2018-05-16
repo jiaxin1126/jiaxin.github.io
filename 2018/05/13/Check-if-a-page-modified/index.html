@@ -5,16 +5,28 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create','UA-113875376-1','auto');ga('send','pageview');</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Check if a page modified.</h1><a id="logo" href="/.">Let it be.</a><p class="description">Thinking writing recording.</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Check if a page modified.</h1><div class="post-meta">May 13, 2018</div><a class="disqus-comment-count" data-disqus-identifier="2018/05/13/Check-if-a-page-modified/" href="/2018/05/13/Check-if-a-page-modified/#disqus_thread"></a><div class="post-content"><p>Automatically check if a page is modified or not.<br>If it is, a mail will be sent to my email address.</p>
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><p>Note: this is just for fun.</p>
 <a id="more"></a>
-<h2 id="Underfinished-now-take-some-memos"><a href="#Underfinished-now-take-some-memos" class="headerlink" title="Underfinished now, take some memos."></a>Underfinished now, take some memos.</h2><h3 id="library"><a href="#library" class="headerlink" title="library:"></a>library:</h3><ul>
+<h2 id="Almost-finished-now-take-some-memos"><a href="#Almost-finished-now-take-some-memos" class="headerlink" title="Almost finished now, take some memos."></a>Almost finished now, take some memos.</h2><h3 id="library"><a href="#library" class="headerlink" title="library:"></a>library:</h3><ul>
 <li>urllib2</li>
 <li>stmplib</li>
 </ul>
 <h3 id="flow"><a href="#flow" class="headerlink" title="flow?"></a>flow?</h3><ul>
 <li><a href="https://www.zhihu.com/question/27720717" target="_blank" rel="external">Look here</a></li>
 <li>Get last modified from header.</li>
-<li>Send a If-Modified-Since request.</li>
-<li>200 shows the page was modified.</li>
-<li>304 show nothing happened.</li>
+<li><del>Send a If-Modified-Since request.</del></li>
+<li><del>200 shows the page was modified.</del></li>
+<li><del>304 show nothing happened.</del></li>
+<li>When the scrpit is executed, get the newest last modified value then compare to the old one.<ul>
+<li>If no changes, that means the page is not modified.</li>
+<li>If some changes happened, that means the page is modified. Don’t forget to get the newest modified value.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Automatically-regularly-execute"><a href="#Automatically-regularly-execute" class="headerlink" title="Automatically regularly execute"></a>Automatically regularly execute</h3><ul>
+<li><p>crontab</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> crontab -e</div><div class="line"></div><div class="line"><span class="number">0</span> <span class="number">16</span> * * * python [<span class="keyword">file</span> path]</div></pre></td></tr></table></figure>
+</li>
+<li><p>Means the script will be executed 16pm everyday.</p>
+</li>
 </ul>
 <h3 id="Some-resource"><a href="#Some-resource" class="headerlink" title="Some resource"></a>Some resource</h3><ul>
 <li><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html" target="_blank" rel="external">About If-Modified-Since</a></li>
@@ -23,6 +35,7 @@ ga('create','UA-113875376-1','auto');ga('send','pageview');</script><!-- hexo-in
 <li><a href="https://qiita.com/bgg0u/items/630a87ce1a44778bbeb1" target="_blank" rel="external">How to send mail via gmail</a></li>
 <li><a href="https://stackoverflow.com/questions/10147455/how-to-send-an-email-with-gmail-as-provider-using-python" target="_blank" rel="external">But using gmail is difficult</a></li>
 <li><del>So finally I chosed hotmail for my provider address.</del></li>
+<li><a href="http://www.adminschoice.com/crontab-quick-reference" target="_blank" rel="external">Crontab – Quick Reference</a></li>
 </ul>
 </div><div class="tags"><a href="/tags/English/">English</a><a href="/tags/python/">python</a></div><div class="post-nav"><a class="next" href="/2018/05/12/关于那段时间的事，还是想说点什么发泄一下/">关于那段时间的事，还是想说点什么发泄一下</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论 「请确保 disqus.com 可以正常加载」</button></div><script>var disqus_shortname = 'https-jiaxin1126-github-io';
 var disqus_identifier = '2018/05/13/Check-if-a-page-modified/';
